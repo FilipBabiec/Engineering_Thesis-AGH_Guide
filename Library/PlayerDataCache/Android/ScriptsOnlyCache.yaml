@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ARLocationsScript
     - BuidlingsDropdownHandler
     - CameraControl
     - CameraToggler
@@ -10,6 +11,7 @@ ScriptsOnlyBuild:
     - FloatAndRotate
     - FollowScript
     - LocationScriptPOI
+    - LocationsButtonsScript
     - Mapbox.Examples.CameraBillboard
     - Mapbox.Examples.DragableDirectionWaypoint
     - Mapbox.Examples.FeatureUiMarker
@@ -42,6 +44,7 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.Utilities.DebugTools.SceneData
     - Mapbox.Unity.Utilities.DebugTools.ScenesList
     - Mapbox.Unity.Utilities.Runnable
+    - MaterialManagerScript
     - NavInit
     - NavigateButton
     - OfficesDropdownHandler
@@ -52,8 +55,6 @@ ScriptsOnlyBuild:
     - SearchChange
     - SoundManager
     - Toggler
-    - TurnTheGameOn.ArrowWaypointer.Waypoint
-    - TurnTheGameOn.ArrowWaypointer.WaypointController
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -61,6 +62,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
     Unity.XR.ARCore.Editor.dll:
     - UnityEditor.XR.ARCore.ARCoreSettings
@@ -101,7 +103,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Location-basedGame.unity:
+    Assets/AGH_Guide.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -145,10 +147,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1632}
-    - Class: 114
-      Script: {instanceID: 1634}
-    - Class: 114
       Script: {instanceID: 1636}
     - Class: 114
       Script: {instanceID: 1638}
@@ -157,27 +155,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1642}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1644}
     - Class: 114
-      Script: {instanceID: 1840}
+      Script: {instanceID: 1646}
+    - Class: 114
+      Script: {instanceID: 1790}
     - Class: 114
       Script: {instanceID: 1844}
     - Class: 114
-      Script: {instanceID: 1910}
+      Script: {instanceID: 1848}
     - Class: 114
-      Script: {instanceID: 1948}
+      Script: {instanceID: 1890}
     - Class: 114
-      Script: {instanceID: 2210}
+      Script: {instanceID: 1916}
     - Class: 114
-      Script: {instanceID: 2356}
+      Script: {instanceID: 1954}
     - Class: 114
-      Script: {instanceID: 2388}
+      Script: {instanceID: 2214}
     - Class: 114
-      Script: {instanceID: 2448}
+      Script: {instanceID: 2360}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2392}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2452}
+    - Class: 114
+      Script: {instanceID: 2602}
     - Class: 114
       Script: {instanceID: 2670}
     - Class: 114
@@ -193,115 +195,119 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3006}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3206}
+    - Class: 114
+      Script: {instanceID: 3220}
     - Class: 114
       Script: {instanceID: 3550}
     - Class: 114
       Script: {instanceID: 3576}
     - Class: 114
-      Script: {instanceID: 3588}
+      Script: {instanceID: 3690}
     - Class: 114
-      Script: {instanceID: 3692}
+      Script: {instanceID: 3694}
     - Class: 114
-      Script: {instanceID: 3696}
+      Script: {instanceID: 3730}
     - Class: 114
-      Script: {instanceID: 3732}
+      Script: {instanceID: 3768}
     - Class: 114
-      Script: {instanceID: 3770}
+      Script: {instanceID: 3940}
     - Class: 114
-      Script: {instanceID: 3942}
+      Script: {instanceID: 4016}
     - Class: 114
-      Script: {instanceID: 4114}
+      Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 4230}
+      Script: {instanceID: 4228}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4326}
     - Class: 114
-      Script: {instanceID: 4342}
+      Script: {instanceID: 4340}
     - Class: 114
-      Script: {instanceID: 4424}
+      Script: {instanceID: 4422}
     - Class: 114
-      Script: {instanceID: 4446}
+      Script: {instanceID: 4444}
     - Class: 114
-      Script: {instanceID: 4660}
+      Script: {instanceID: 4658}
     - Class: 114
-      Script: {instanceID: 4712}
+      Script: {instanceID: 4710}
     - Class: 114
-      Script: {instanceID: 4828}
+      Script: {instanceID: 4826}
     - Class: 114
-      Script: {instanceID: 5028}
+      Script: {instanceID: 5026}
     - Class: 114
-      Script: {instanceID: 5362}
+      Script: {instanceID: 5360}
     - Class: 114
-      Script: {instanceID: 5462}
+      Script: {instanceID: 5460}
     - Class: 114
-      Script: {instanceID: 5526}
+      Script: {instanceID: 5524}
     - Class: 114
-      Script: {instanceID: 5778}
+      Script: {instanceID: 5776}
     - Class: 114
-      Script: {instanceID: 5804}
+      Script: {instanceID: 5802}
     - Class: 114
-      Script: {instanceID: 5882}
+      Script: {instanceID: 5880}
     - Class: 114
-      Script: {instanceID: 5928}
+      Script: {instanceID: 5926}
     - Class: 114
-      Script: {instanceID: 6024}
+      Script: {instanceID: 6022}
     - Class: 114
-      Script: {instanceID: 6204}
+      Script: {instanceID: 6202}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 6232}
     - Class: 114
-      Script: {instanceID: 6308}
+      Script: {instanceID: 6306}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 6380}
     - Class: 114
-      Script: {instanceID: 6412}
+      Script: {instanceID: 6410}
     - Class: 114
-      Script: {instanceID: 6436}
+      Script: {instanceID: 6434}
     - Class: 114
-      Script: {instanceID: 6572}
+      Script: {instanceID: 6570}
     - Class: 114
-      Script: {instanceID: 6610}
+      Script: {instanceID: 6608}
     - Class: 114
-      Script: {instanceID: 6756}
+      Script: {instanceID: 6754}
     - Class: 114
-      Script: {instanceID: 6980}
+      Script: {instanceID: 6978}
     - Class: 114
-      Script: {instanceID: 7160}
+      Script: {instanceID: 7158}
     - Class: 114
-      Script: {instanceID: 7170}
+      Script: {instanceID: 7168}
     - Class: 114
-      Script: {instanceID: 7504}
+      Script: {instanceID: 7502}
     - Class: 114
-      Script: {instanceID: 7686}
+      Script: {instanceID: 7684}
     - Class: 114
-      Script: {instanceID: 7834}
+      Script: {instanceID: 7832}
     - Class: 114
-      Script: {instanceID: 8048}
+      Script: {instanceID: 8046}
     - Class: 114
-      Script: {instanceID: 8114}
+      Script: {instanceID: 8112}
     - Class: 114
-      Script: {instanceID: 8250}
+      Script: {instanceID: 8246}
     - Class: 114
-      Script: {instanceID: 8414}
+      Script: {instanceID: 8270}
     - Class: 114
-      Script: {instanceID: 8760}
+      Script: {instanceID: 8412}
     - Class: 114
-      Script: {instanceID: 8886}
+      Script: {instanceID: 8646}
     - Class: 114
-      Script: {instanceID: 8938}
+      Script: {instanceID: 8758}
     - Class: 114
-      Script: {instanceID: 9022}
+      Script: {instanceID: 8884}
     - Class: 114
-      Script: {instanceID: 9092}
+      Script: {instanceID: 8936}
     - Class: 114
-      Script: {instanceID: 9224}
+      Script: {instanceID: 9020}
     - Class: 114
-      Script: {instanceID: 9312}
+      Script: {instanceID: 9090}
     - Class: 114
-      Script: {instanceID: 9342}
+      Script: {instanceID: 9222}
     - Class: 114
-      Script: {instanceID: 46996}
+      Script: {instanceID: 9310}
+    - Class: 114
+      Script: {instanceID: 9340}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -443,6 +449,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: de00113d7819349bcbd6d33c48ea106b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocationsButtonsScript
+  - hash:
+      serializedVersion: 2
       Hash: 67f2073ab00a2413a89dbb5e06ed6272
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Modifiers
@@ -483,12 +495,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Components
     className: FeatureBehaviour
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UserControlThirdPerson
   - hash:
       serializedVersion: 2
       Hash: c88c4199b288356ec3eb2f0d85abc619
@@ -623,12 +629,6 @@ ScriptsOnlyBuild:
     className: LocationArrayEditorLocationProvider
   - hash:
       serializedVersion: 2
-      Hash: 344d921358ceecd800f2a728034ade3e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TurnTheGameOn.ArrowWaypointer
-    className: WaypointController
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Examples
@@ -725,12 +725,6 @@ ScriptsOnlyBuild:
     className: TrafficUvAnimator
   - hash:
       serializedVersion: 2
-      Hash: f8bd7a92bf9f22d289759689ae7b1fd4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TurnTheGameOn.ArrowWaypointer
-    className: SmoothFollow
-  - hash:
-      serializedVersion: 2
       Hash: 0c5108545fb925730d4d5887ebcdd20c
     assemblyName: Unity.XR.ARSubsystems.dll
     namespaceName: UnityEngine.XR.ARSubsystems
@@ -777,6 +771,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 426497fe4d13344fb21e0bdd8715bc83
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MaterialManagerScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -861,12 +861,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.Utilities.DebugTools
     className: ScenesList
-  - hash:
-      serializedVersion: 2
-      Hash: b18f1f5690ed802d58cd7ead5c7fae0a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TurnTheGameOn.ArrowWaypointer
-    className: Waypoint
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1907,7 +1901,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 4321ab30f535d805d0b323c368b5100d
+      Hash: 2630f8c003270739ba3f643b959e8256
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Toggler
@@ -1979,6 +1973,12 @@ ScriptsOnlyBuild:
     className: ARCoreLoader
   - hash:
       serializedVersion: 2
+      Hash: a993ef0d463377d32ecedfc9e1c84da8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowScript
+  - hash:
+      serializedVersion: 2
       Hash: 8c362ed1d3d229b03c8cd704cd15ca04
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Modifiers
@@ -2027,16 +2027,16 @@ ScriptsOnlyBuild:
     className: UnityTile
   - hash:
       serializedVersion: 2
-      Hash: 5e8a01a14cef8c5fb6866e39e13545df
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CharacterControllerThirdPerson
-  - hash:
-      serializedVersion: 2
       Hash: 3e8942e5b6faa01416f57e656c942729
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SetCameraHeight
+  - hash:
+      serializedVersion: 2
+      Hash: 920d8b3bbd0f4841a37e6602ed8b34a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ARLocationsScript
   - hash:
       serializedVersion: 2
       Hash: ba6ef9e2082e09d9399eaef28d94d812
@@ -2261,7 +2261,7 @@ ScriptsOnlyBuild:
     className: DeviceLocationProviderAndroidNative
   - hash:
       serializedVersion: 2
-      Hash: 8b47fd0c88dfa19149c637e90d4e3d92
+      Hash: 478a31768b0e5882bb2db4699dd28eca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NavigateButton
@@ -2277,13 +2277,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ImageDataFetcher
-  - hash:
-      serializedVersion: 2
-      Hash: a993ef0d463377d32ecedfc9e1c84da8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FollowScript
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Location-basedGame.unity
+  - Assets/AGH_Guide.unity
   playerPath: C:/Users/msi/Documents/UnityProjects/AGH_Guide/AGHGuide.apk

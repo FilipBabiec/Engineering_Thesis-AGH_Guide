@@ -20,6 +20,7 @@ public class BuidlingsDropdownHandler : MonoBehaviour
         dropdown.options.Clear();
 
         List<string> items = new List<string>();
+        items.Add("A0");
         items.Add("A1");
         items.Add("A2");
         items.Add("A3");

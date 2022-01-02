@@ -23,6 +23,7 @@ public class OtherDropdownHandler : MonoBehaviour
         items.Add("Studio Club");
         items.Add("Recruiting Center");
         items.Add("Main Library");
+        items.Add("TestLocation");
 
         //fill dropdown with items
         foreach (var item in items)

@@ -458,7 +458,6 @@
 "Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/FileMonitor.cs"
 "Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntries.cs"
 "Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntry.cs"
-"Assets/TurnTheGameOn/Arrow WayPointer/Scripts/Editor/Editor_WaypointController.cs"
 -langversion:8.0
 
 /deterministic

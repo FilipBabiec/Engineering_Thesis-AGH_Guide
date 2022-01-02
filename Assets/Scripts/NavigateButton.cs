@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class NavigateButton : MonoBehaviour
 {
-    [SerializeField] private Material LineMaterial;
-    [SerializeField] private Material LineMaterialColor;
-    [SerializeField] private Material TransparentMaterial;
     public TextMeshProUGUI navigateText;
     public TextMeshProUGUI finishText;
     public GameObject End;
@@ -21,6 +18,9 @@ public class NavigateButton : MonoBehaviour
     public InputField InputRoom;
     public GameObject Player;
     public GameObject ARCamera;
+    private Renderer _renderARLine;
+    private GameObject Line;
+
     int i;
     int room;
     string classroom;
@@ -44,12 +44,16 @@ public class NavigateButton : MonoBehaviour
 
         if (End.activeSelf == true)
         {
-            LineMaterial.color =LineMaterialColor.color;
+            Line = GameObject.Find("direction waypoint  entity");
+            _renderARLine = Line.GetComponent<Renderer>();
+            _renderARLine.material.SetColor("_Color", new Color32(0, 206, 201, 255));
             NavButt.GetComponentInChildren<Text>().text = "Stop navigating";
         }
         else
         {
-            LineMaterial.color = TransparentMaterial.color;
+            Line = GameObject.Find("direction waypoint  entity");
+            _renderARLine = Line.GetComponent<Renderer>();
+            _renderARLine.material.SetColor("_Color", new Color32(0, 206, 201, 0));
             NavButt.GetComponentInChildren<Text>().text = "Navigate";
         }
     }
@@ -126,17 +130,7 @@ public class NavigateButton : MonoBehaviour
     void Update()
     {
         if (End.activeSelf == true)
-        {
-            //switching off navigation line while in AR mode
-            if (ARCamera.activeSelf == false)
-            {
-                LineMaterial.color = LineMaterialColor.color;
-            }
-            else if (ARCamera.activeSelf == true)
-            {
-                LineMaterial.color = TransparentMaterial.color;
-            }
-
+        {           
             //arriving at destiantion
             if (i == 0)
             {

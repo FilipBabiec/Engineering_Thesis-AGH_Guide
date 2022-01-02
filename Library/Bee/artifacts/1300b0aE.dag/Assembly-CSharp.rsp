@@ -707,6 +707,7 @@
 "Assets/Mapbox/Unity/Utilities/TelemetryConfigurationButton.cs"
 "Assets/Mapbox/Unity/Utilities/VectorEntity.cs"
 "Assets/Mapbox/Unity/Utilities/VectorExtensions.cs"
+"Assets/Scripts/ARLocationsScript.cs"
 "Assets/Scripts/BuidlingsDropdownHandler.cs"
 "Assets/Scripts/CameraControl.cs"
 "Assets/Scripts/CameraToggler.cs"
@@ -715,7 +716,9 @@
 "Assets/Scripts/FacultyDropdownHandler.cs"
 "Assets/Scripts/FloatAndRotate.cs"
 "Assets/Scripts/FollowScript.cs"
+"Assets/Scripts/LocationsButtonsScript.cs"
 "Assets/Scripts/LocationScriptPOI.cs"
+"Assets/Scripts/MaterialManagerScript.cs"
 "Assets/Scripts/NavigateButton.cs"
 "Assets/Scripts/NavInit.cs"
 "Assets/Scripts/OfficesDropdownHandler.cs"
@@ -725,11 +728,6 @@
 "Assets/Scripts/SearchChange.cs"
 "Assets/Scripts/SoundManager.cs"
 "Assets/Scripts/Toggler.cs"
-"Assets/TurnTheGameOn/Arrow WayPointer/DemoContent/CharacterController/Scripts/CharacterControllerThirdPerson.cs"
-"Assets/TurnTheGameOn/Arrow WayPointer/DemoContent/CharacterController/Scripts/SmoothFollow.cs"
-"Assets/TurnTheGameOn/Arrow WayPointer/DemoContent/CharacterController/Scripts/UserControlThirdPerson.cs"
-"Assets/TurnTheGameOn/Arrow WayPointer/Scripts/Waypoint.cs"
-"Assets/TurnTheGameOn/Arrow WayPointer/Scripts/WaypointController.cs"
 -langversion:8.0
 
 /deterministic

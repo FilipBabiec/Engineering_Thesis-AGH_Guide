@@ -11,6 +11,9 @@ public class Toggler : MonoBehaviour
     public GameObject SearchMenu;
     public GameObject SettingsMenu;
     public GameObject Camera;
+    public GameObject Locations;
+    public GameObject ARLocations;
+    public GameObject DescriptionCanvas;
     public Button CameraButton1;
     public Button CameraButton2;
     public Sprite Image;
@@ -34,10 +37,12 @@ public class Toggler : MonoBehaviour
         if (SearchMenu.activeSelf == true || SettingsMenu.activeSelf == true)
         {
             GetComponent<CameraControl>().enabled = false;
+            DescriptionCanvas.SetActive(false);
         }
         else if (SearchMenu.activeSelf == false && SettingsMenu.activeSelf == false)
         {
             GetComponent<CameraControl>().enabled = true;
+            DescriptionCanvas.SetActive(true);
         }
     }
 
@@ -46,6 +51,8 @@ public class Toggler : MonoBehaviour
         bool isActive = Map.activeSelf;
         Map.SetActive(!isActive);
         Player.SetActive(!isActive);
+        Locations.SetActive(!isActive);
+        ARLocations.SetActive(isActive);
     }
 
     public void toggleSearch()
