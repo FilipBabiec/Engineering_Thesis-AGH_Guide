@@ -2,14 +2,14 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ARLocationsScript
+    - ARMarkerScript
     - BuidlingsDropdownHandler
-    - CameraControl
+    - CameraControlScript
     - CameraToggler
     - DescriptionScript
     - DestinationMarkerPositionScript
     - FacultyDropdownHandler
-    - FloatAndRotate
-    - FollowScript
+    - FollowButtonScript
     - LocationScriptPOI
     - LocationsButtonsScript
     - Mapbox.Examples.CameraBillboard
@@ -17,7 +17,6 @@ ScriptsOnlyBuild:
     - Mapbox.Examples.FeatureUiMarker
     - Mapbox.Examples.ImmediatePositionWithLocationProvider
     - Mapbox.Examples.LabelTextSetter
-    - Mapbox.Examples.LoadingPanelController
     - Mapbox.Examples.MakiHelper
     - Mapbox.Examples.PoiLabelTextSetter
     - Mapbox.Examples.PoiMarkerHelper
@@ -43,12 +42,11 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.MeshGeneration.Modifiers.ReplaceFeatureCollectionModifier
     - Mapbox.Unity.Utilities.DebugTools.SceneData
     - Mapbox.Unity.Utilities.DebugTools.ScenesList
-    - Mapbox.Unity.Utilities.Runnable
-    - MaterialManagerScript
     - NavInit
     - NavigateButton
     - OfficesDropdownHandler
     - OtherDropdownHandler
+    - PrimaryInfoScript
     - QuitApp
     - RotateMarkers
     - ScriptablePalette
@@ -147,6 +145,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1634}
+    - Class: 114
       Script: {instanceID: 1636}
     - Class: 114
       Script: {instanceID: 1638}
@@ -157,89 +157,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1644}
     - Class: 114
-      Script: {instanceID: 1646}
+      Script: {instanceID: 1788}
     - Class: 114
-      Script: {instanceID: 1790}
+      Script: {instanceID: 1842}
     - Class: 114
-      Script: {instanceID: 1844}
+      Script: {instanceID: 1846}
     - Class: 114
-      Script: {instanceID: 1848}
+      Script: {instanceID: 1888}
     - Class: 114
-      Script: {instanceID: 1890}
+      Script: {instanceID: 1914}
     - Class: 114
-      Script: {instanceID: 1916}
+      Script: {instanceID: 1952}
     - Class: 114
-      Script: {instanceID: 1954}
+      Script: {instanceID: 2212}
     - Class: 114
-      Script: {instanceID: 2214}
+      Script: {instanceID: 2358}
     - Class: 114
-      Script: {instanceID: 2360}
+      Script: {instanceID: 2390}
     - Class: 114
-      Script: {instanceID: 2392}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2452}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2602}
+      Script: {instanceID: 2668}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2706}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 2778}
+      Script: {instanceID: 2872}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 2986}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 3204}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 3548}
     - Class: 114
-      Script: {instanceID: 3220}
+      Script: {instanceID: 3574}
     - Class: 114
-      Script: {instanceID: 3550}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 3576}
+      Script: {instanceID: 3692}
     - Class: 114
-      Script: {instanceID: 3690}
+      Script: {instanceID: 3728}
     - Class: 114
-      Script: {instanceID: 3694}
+      Script: {instanceID: 3938}
     - Class: 114
-      Script: {instanceID: 3730}
+      Script: {instanceID: 4014}
     - Class: 114
-      Script: {instanceID: 3768}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 3940}
+      Script: {instanceID: 4226}
     - Class: 114
-      Script: {instanceID: 4016}
+      Script: {instanceID: 4324}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 4338}
     - Class: 114
-      Script: {instanceID: 4228}
+      Script: {instanceID: 4420}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 4656}
     - Class: 114
-      Script: {instanceID: 4340}
+      Script: {instanceID: 4708}
     - Class: 114
-      Script: {instanceID: 4422}
+      Script: {instanceID: 4824}
     - Class: 114
-      Script: {instanceID: 4444}
+      Script: {instanceID: 5024}
     - Class: 114
-      Script: {instanceID: 4658}
+      Script: {instanceID: 5358}
     - Class: 114
-      Script: {instanceID: 4710}
+      Script: {instanceID: 5458}
     - Class: 114
-      Script: {instanceID: 4826}
+      Script: {instanceID: 5522}
     - Class: 114
-      Script: {instanceID: 5026}
-    - Class: 114
-      Script: {instanceID: 5360}
-    - Class: 114
-      Script: {instanceID: 5460}
-    - Class: 114
-      Script: {instanceID: 5524}
+      Script: {instanceID: 5708}
     - Class: 114
       Script: {instanceID: 5776}
     - Class: 114
@@ -251,63 +245,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6022}
     - Class: 114
-      Script: {instanceID: 6202}
+      Script: {instanceID: 6194}
     - Class: 114
-      Script: {instanceID: 6232}
+      Script: {instanceID: 6204}
     - Class: 114
-      Script: {instanceID: 6306}
+      Script: {instanceID: 6234}
     - Class: 114
-      Script: {instanceID: 6380}
+      Script: {instanceID: 6308}
     - Class: 114
-      Script: {instanceID: 6410}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 6434}
+      Script: {instanceID: 6412}
     - Class: 114
-      Script: {instanceID: 6570}
+      Script: {instanceID: 6436}
     - Class: 114
-      Script: {instanceID: 6608}
+      Script: {instanceID: 6572}
     - Class: 114
-      Script: {instanceID: 6754}
+      Script: {instanceID: 6610}
     - Class: 114
-      Script: {instanceID: 6978}
+      Script: {instanceID: 6742}
     - Class: 114
-      Script: {instanceID: 7158}
+      Script: {instanceID: 6756}
     - Class: 114
-      Script: {instanceID: 7168}
+      Script: {instanceID: 6982}
     - Class: 114
-      Script: {instanceID: 7502}
+      Script: {instanceID: 7162}
     - Class: 114
-      Script: {instanceID: 7684}
+      Script: {instanceID: 7172}
     - Class: 114
-      Script: {instanceID: 7832}
+      Script: {instanceID: 7506}
     - Class: 114
-      Script: {instanceID: 8046}
+      Script: {instanceID: 7688}
     - Class: 114
-      Script: {instanceID: 8112}
+      Script: {instanceID: 7836}
     - Class: 114
-      Script: {instanceID: 8246}
+      Script: {instanceID: 8050}
     - Class: 114
-      Script: {instanceID: 8270}
+      Script: {instanceID: 8116}
     - Class: 114
-      Script: {instanceID: 8412}
+      Script: {instanceID: 8250}
     - Class: 114
-      Script: {instanceID: 8646}
+      Script: {instanceID: 8274}
     - Class: 114
-      Script: {instanceID: 8758}
+      Script: {instanceID: 8416}
     - Class: 114
-      Script: {instanceID: 8884}
+      Script: {instanceID: 8650}
     - Class: 114
-      Script: {instanceID: 8936}
+      Script: {instanceID: 8762}
     - Class: 114
-      Script: {instanceID: 9020}
+      Script: {instanceID: 8888}
     - Class: 114
-      Script: {instanceID: 9090}
+      Script: {instanceID: 8940}
     - Class: 114
-      Script: {instanceID: 9222}
+      Script: {instanceID: 9094}
     - Class: 114
-      Script: {instanceID: 9310}
+      Script: {instanceID: 9226}
     - Class: 114
-      Script: {instanceID: 9340}
+      Script: {instanceID: 9314}
+    - Class: 114
+      Script: {instanceID: 9344}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -461,7 +457,7 @@ ScriptsOnlyBuild:
     className: SnapTerrainRaycastModifier
   - hash:
       serializedVersion: 2
-      Hash: 22beba72e92050fa7e8680db3812facb
+      Hash: 04a4727eeaa42fdb99538ede977a4c6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SearchChange
@@ -1205,7 +1201,7 @@ ScriptsOnlyBuild:
     className: DictionaryAsset
   - hash:
       serializedVersion: 2
-      Hash: d76a1aa47965f07ce7910681330f8ea1
+      Hash: f7af2a028f549903086955405bce976a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BuidlingsDropdownHandler
@@ -1301,7 +1297,7 @@ ScriptsOnlyBuild:
     className: ARTrackedImageManager
   - hash:
       serializedVersion: 2
-      Hash: d76a1aa47965f07ce7910681330f8ea1
+      Hash: f7af2a028f549903086955405bce976a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OtherDropdownHandler
@@ -1389,6 +1385,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Components
     className: VertexDebugger
+  - hash:
+      serializedVersion: 2
+      Hash: 32b477da820a9188bf79c01a3cf5beb8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PrimaryInfoScript
   - hash:
       serializedVersion: 2
       Hash: 8c362ed1d3d229b03c8cd704cd15ca04
@@ -1511,6 +1513,12 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: f5c23a987f8afed085eb43152dd002e8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraControlScript
+  - hash:
+      serializedVersion: 2
       Hash: 82e649217a87767778e4985365512671
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Examples
@@ -1617,6 +1625,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARTrackedObject
+  - hash:
+      serializedVersion: 2
+      Hash: 010ba020723f21064e6fa5f083c45307
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ARMarkerScript
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -1976,7 +1990,7 @@ ScriptsOnlyBuild:
       Hash: a993ef0d463377d32ecedfc9e1c84da8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FollowScript
+    className: FollowButtonScript
   - hash:
       serializedVersion: 2
       Hash: 8c362ed1d3d229b03c8cd704cd15ca04
@@ -2033,7 +2047,7 @@ ScriptsOnlyBuild:
     className: SetCameraHeight
   - hash:
       serializedVersion: 2
-      Hash: 920d8b3bbd0f4841a37e6602ed8b34a5
+      Hash: 2e0dcef01184450706e68841f6f14a9c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ARLocationsScript
@@ -2063,7 +2077,7 @@ ScriptsOnlyBuild:
     className: UnityOnParticleCollisionMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c2ef3583ac1fb1651be051d5e8ecb0d1
+      Hash: 3fdb9d8cecc192ddcc972f02a6b263b6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraToggler
@@ -2111,7 +2125,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 31485072c5d622e6878b998f8732e925
+      Hash: f7b1894148a0889b0ae0429b55420e6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NavInit
@@ -2153,7 +2167,7 @@ ScriptsOnlyBuild:
     className: ARRaycastManager
   - hash:
       serializedVersion: 2
-      Hash: d76a1aa47965f07ce7910681330f8ea1
+      Hash: f7af2a028f549903086955405bce976a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OfficesDropdownHandler
@@ -2261,7 +2275,7 @@ ScriptsOnlyBuild:
     className: DeviceLocationProviderAndroidNative
   - hash:
       serializedVersion: 2
-      Hash: 478a31768b0e5882bb2db4699dd28eca
+      Hash: e06721a7c4ef140822e695c9ab2547dd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NavigateButton

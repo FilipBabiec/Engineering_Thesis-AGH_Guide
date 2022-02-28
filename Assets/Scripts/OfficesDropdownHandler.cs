@@ -6,8 +6,6 @@ using TMPro;
 
 public class OfficesDropdownHandler : MonoBehaviour
 {
-    [SerializeField] private Material LineMaterial;
-    [SerializeField] private Material TransparentMaterial;
     public GameObject End;
     public Button NavButt;
     private GameObject Destination;
@@ -23,6 +21,7 @@ public class OfficesDropdownHandler : MonoBehaviour
         items.Add("WIMIR");
         items.Add("WEAIIIB");
         items.Add("WGGIOŒ");
+        items.Add("WMS");
 
         //fill dropdown with items
         foreach (var item in items)
@@ -44,7 +43,6 @@ public class OfficesDropdownHandler : MonoBehaviour
         Destination = GameObject.Find(textNavigate.text);
         End.transform.position = Destination.transform.position;
         End.SetActive(false);
-        LineMaterial.color = TransparentMaterial.color;
         NavButt.GetComponentInChildren<Text>().text = "Navigate";
     }
 }

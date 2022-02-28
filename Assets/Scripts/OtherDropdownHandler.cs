@@ -6,8 +6,6 @@ using TMPro;
 
 public class OtherDropdownHandler : MonoBehaviour
 {
-    [SerializeField] private Material LineMaterial;
-    [SerializeField] private Material TransparentMaterial;
     public GameObject End;
     public Button NavButt;
     private GameObject Destination;
@@ -23,7 +21,6 @@ public class OtherDropdownHandler : MonoBehaviour
         items.Add("Studio Club");
         items.Add("Recruiting Center");
         items.Add("Main Library");
-        items.Add("TestLocation");
 
         //fill dropdown with items
         foreach (var item in items)
@@ -45,7 +42,6 @@ public class OtherDropdownHandler : MonoBehaviour
         Destination = GameObject.Find(textNavigate.text);
         End.transform.position = Destination.transform.position;
         End.SetActive(false);
-        LineMaterial.color = TransparentMaterial.color;
         NavButt.GetComponentInChildren<Text>().text = "Navigate";
     }
 }

@@ -36,12 +36,12 @@ public class Toggler : MonoBehaviour
 
         if (SearchMenu.activeSelf == true || SettingsMenu.activeSelf == true)
         {
-            GetComponent<CameraControl>().enabled = false;
+            GetComponent<CameraControlScript>().enabled = false;
             DescriptionCanvas.SetActive(false);
         }
         else if (SearchMenu.activeSelf == false && SettingsMenu.activeSelf == false)
         {
-            GetComponent<CameraControl>().enabled = true;
+            GetComponent<CameraControlScript>().enabled = true;
             DescriptionCanvas.SetActive(true);
         }
     }

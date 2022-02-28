@@ -254,6 +254,7 @@
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Factories\TerrainDataFetcher.cs" />
     <Compile Include="Assets\Mapbox\Examples\3_POIPlacement\POIPlacementScriptExample.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Components\VertexDebugger.cs" />
+    <Compile Include="Assets\Scripts\PrimaryInfoScript.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Filters\HeightFilter.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\IReplacementCriteria.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MergedModifierStack.cs" />
@@ -280,6 +281,7 @@
     <Compile Include="Assets\Mapbox\Unity\DataContainers\SpawnPrefabOptions.cs" />
     <Compile Include="Assets\Mapbox\Unity\Telemetry\ITelemetryLibrary.cs" />
     <Compile Include="Assets\Mapbox\Unity\DataContainers\ElevationModificationOptions.cs" />
+    <Compile Include="Assets\Scripts\CameraControlScript.cs" />
     <Compile Include="Assets\Mapbox\Examples\Scripts\CameraBillboard.cs" />
     <Compile Include="Assets\Mapbox\Unity\Location\AngleSmoothing\AngleSmoothingNoOp.cs" />
     <Compile Include="Assets\Mapbox\Unity\Map\TileProviders\QuadTreeTileProvider.cs" />
@@ -310,6 +312,7 @@
     <Compile Include="Assets\Mapbox\Examples\Scripts\ObjectInspectorModifier.cs" />
     <Compile Include="Assets\Mapbox\Unity\DataContainers\ColliderOptions.cs" />
     <Compile Include="Assets\Mapbox\Unity\DataContainers\MapOptions.cs" />
+    <Compile Include="Assets\Scripts\ARMarkerScript.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Utils\UnixTimestampUtils.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\GameObjectModifiers\ColliderModifier.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Response\DirectionsResponse.cs" />
@@ -383,7 +386,7 @@
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MeshModifiers\ChamferHeightModifier.cs" />
     <Compile Include="Assets\Mapbox\Examples\Scripts\UpdateMapWithLocationProvider.cs" />
     <Compile Include="Assets\Mapbox\Unity\Location\TransformLocationProvider.cs" />
-    <Compile Include="Assets\Scripts\FollowScript.cs" />
+    <Compile Include="Assets\Scripts\FollowButtonScript.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\ModifierStackBase.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MeshModifiers\PolygonMeshModifier.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\Resource.cs" />

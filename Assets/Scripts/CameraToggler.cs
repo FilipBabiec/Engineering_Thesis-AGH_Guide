@@ -14,27 +14,23 @@ public class CameraToggler : MonoBehaviour
     public GameObject ARmarker;
     public GameObject GameMarker;
     public Button NavButt;
+    public GameObject LocationDescCanvas;
 
-    int currentCam;
+    int currentCamId;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentCam = 0;
-        setCam(currentCam);
+        currentCamId = 0;
+        SetCamera(currentCamId);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
-    public void setCam(int idx)
+    public void SetCamera(int id)
     {
         for (int i = 0; i < Cameras.Length; i++)
         {
-            if (i == idx)
+            if (i == id)
             {
                 Cameras[i].SetActive(true);
             }
@@ -45,19 +41,24 @@ public class CameraToggler : MonoBehaviour
         }
     }
 
-    public void toggleCam()
+    public void ToggleCamera()
     {
-        currentCam++;
-        if (currentCam > Cameras.Length - 1)
-            currentCam = 0;
-        setCam(currentCam);
-        if(currentCam == 1)
+        currentCamId++;
+        if (currentCamId > Cameras.Length - 1)
+        {
+            currentCamId = 0;
+        }
+        SetCamera(currentCamId);
+
+        
+        if(currentCamId == 1)
         {
             CameraButton.image.sprite = ImageAlt;
             if (NavButt.GetComponentInChildren<Text>().text == "Stop navigating")
             {
+                LocationDescCanvas.SetActive(false);
                 ARmarker.SetActive(true);
-                GameMarker.SetActive(false);
+                //GameMarker.SetActive(false);
             } 
         }
         else
@@ -65,8 +66,9 @@ public class CameraToggler : MonoBehaviour
             CameraButton.image.sprite = Image;
             if (NavButt.GetComponentInChildren<Text>().text == "Stop navigating")
             {
+                LocationDescCanvas.SetActive(true);
                 ARmarker.SetActive(false);
-                GameMarker.SetActive(true);
+                //GameMarker.SetActive(true);
             }
         }
     }

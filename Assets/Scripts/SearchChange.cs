@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class SearchChange : MonoBehaviour
 {
-    [SerializeField] private Material LineMaterial;
-    [SerializeField] private Material TransparentMaterial;
     public GameObject End;
     public Button NavButt;
     public TextMeshProUGUI navigateText;
@@ -19,7 +17,6 @@ public class SearchChange : MonoBehaviour
     {
         End.transform.position = new Vector3(0, 0, 0);
         End.SetActive(false);
-        LineMaterial.color = TransparentMaterial.color;
         NavButt.GetComponentInChildren<Text>().text = "Navigate";
 
         switch (val)

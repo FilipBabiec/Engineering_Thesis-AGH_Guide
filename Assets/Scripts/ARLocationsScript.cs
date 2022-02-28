@@ -16,12 +16,14 @@ public class ARLocationsScript : MonoBehaviour
     public double Lat;
     public double Lon;
     public GameObject Player;
-    private GameObject ARCamera;
+    public GameObject ARCamera;
     public GameObject Text;
+    //private GameObject ARSes;
 
-    void Awake()
+    void Start()
     {
-        ARCamera = GameObject.Find("AR Camera");
+        //ARSes = GameObject.Find("AR Session Origin");
+        //ARCamera = GetChildWithName(ARSes, "AR Camera");
     }
 
     void Update()
@@ -30,7 +32,7 @@ public class ARLocationsScript : MonoBehaviour
         this.transform.position = Conversions.GeoToWorldPosition(Lat, Lon, _map.CenterMercator, _map.WorldRelativeScale).ToVector3xz();
         this.gameObject.transform.LookAt(ARCamera.transform);
 
-        if ((Player.transform.position.x < this.transform.position.x + 15 && Player.transform.position.x > this.transform.position.x - 15) && (Player.transform.position.z < this.transform.position.z + 15 && Player.transform.position.z > this.transform.position.z - 15))
+        if ((Player.transform.position.x < this.transform.position.x + 30 && Player.transform.position.x > this.transform.position.x - 30) && (Player.transform.position.z < this.transform.position.z + 30 && Player.transform.position.z > this.transform.position.z - 30))
         {
             //this.GetComponentInChildren<Text>().SetActive(true);
             Text.SetActive(true);
@@ -39,6 +41,20 @@ public class ARLocationsScript : MonoBehaviour
         {
             //this.GetComponentInChildren<Text>().SetActive(false);
             Text.SetActive(false);
+        }
+    }
+
+    GameObject GetChildWithName(GameObject obj, string name)
+    {
+        Transform trans = obj.transform;
+        Transform childTrans = trans.Find(name);
+        if (childTrans != null)
+        {
+            return childTrans.gameObject;
+        }
+        else
+        {
+            return null;
         }
     }
 }

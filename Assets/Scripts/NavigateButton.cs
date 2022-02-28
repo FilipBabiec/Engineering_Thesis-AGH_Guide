@@ -20,6 +20,7 @@ public class NavigateButton : MonoBehaviour
     public GameObject ARCamera;
     private Renderer _renderARLine;
     private GameObject Line;
+    public Texture2D texAR;
 
     int i;
     int room;
@@ -41,21 +42,7 @@ public class NavigateButton : MonoBehaviour
         Destination = GameObject.Find(navigateText.text);
         End.transform.position = Destination.transform.position;
         End.SetActive(!isActive);
-
-        if (End.activeSelf == true)
-        {
-            Line = GameObject.Find("direction waypoint  entity");
-            _renderARLine = Line.GetComponent<Renderer>();
-            _renderARLine.material.SetColor("_Color", new Color32(0, 206, 201, 255));
-            NavButt.GetComponentInChildren<Text>().text = "Stop navigating";
-        }
-        else
-        {
-            Line = GameObject.Find("direction waypoint  entity");
-            _renderARLine = Line.GetComponent<Renderer>();
-            _renderARLine.material.SetColor("_Color", new Color32(0, 206, 201, 0));
-            NavButt.GetComponentInChildren<Text>().text = "Navigate";
-        }
+        OnFinishTextChange();
     }
 
     public void OnFinishTextChange()
@@ -129,6 +116,30 @@ public class NavigateButton : MonoBehaviour
 
     void Update()
     {
+        if (End.activeSelf == true)
+        {
+            NavButt.GetComponentInChildren<Text>().text = "Stop navigating";
+            Line = GameObject.Find("direction waypoint  entity");
+            _renderARLine = Line.GetComponent<Renderer>();            
+            if (ARCamera.activeSelf == true)
+            {
+                _renderARLine.material.SetColor("_Color", new Color32(255, 255, 255, 255));
+                _renderARLine.material.SetTexture("_MainTex", texAR);
+            }
+            else if (ARCamera.activeSelf == false)
+            {
+                _renderARLine.material.SetColor("_Color", new Color32(0, 206, 201, 255));
+                _renderARLine.material.SetTexture("_MainTex", null);
+            }
+        }
+        else if (End.activeSelf == false)
+        {
+            Line = GameObject.Find("direction waypoint  entity");
+            _renderARLine = Line.GetComponent<Renderer>();
+            _renderARLine.material.SetColor("_Color", new Color32(0, 206, 201, 0));
+            NavButt.GetComponentInChildren<Text>().text = "Navigate";
+        }
+
         if (End.activeSelf == true)
         {           
             //arriving at destiantion

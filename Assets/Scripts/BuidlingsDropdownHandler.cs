@@ -6,8 +6,6 @@ using TMPro;
 
 public class BuidlingsDropdownHandler : MonoBehaviour
 {
-    [SerializeField] private Material LineMaterial;
-    [SerializeField] private Material TransparentMaterial;
     public GameObject End;
     public Button NavButt;
     private GameObject Destination;
@@ -29,6 +27,7 @@ public class BuidlingsDropdownHandler : MonoBehaviour
         items.Add("B2");
         items.Add("B3");
         items.Add("B4");
+        items.Add("B7");
         items.Add("C1");
         items.Add("C2");
         items.Add("C3");
@@ -61,7 +60,6 @@ public class BuidlingsDropdownHandler : MonoBehaviour
         Destination = GameObject.Find(textNavigate.text);
         End.transform.position = Destination.transform.position;
         End.SetActive(false);
-        LineMaterial.color = TransparentMaterial.color;
         NavButt.GetComponentInChildren<Text>().text = "Navigate";
     }
 }
